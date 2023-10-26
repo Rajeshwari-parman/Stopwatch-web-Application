@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: hsl(227, 100%, 73%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-left: 450px;
+}
+
+nav {
+    background: #1b1b1b;
+    padding: 0 80px;
+}
+
+nav:after {
+    content: ' ';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+    float: left;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 70px;
+    padding-left: 60px;
+    cursor: pointer;
+}
+
+nav .logo span {
+    color: cyan;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+}
+
+nav ul li {
+    float: left;
+    display: inline-block;
+    background: #1b1b1b;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 70px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+
+nav ul li a:hover {
+    color: cyan;
+    transition: 0.5s ease-in;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #33ffff,
+        0 0 5px #55ffff,
+        0 0 5px #66ffff;
+}
+
+nav ul ul li a:hover {
+    color: cyan;
+    box-shadow: none;
+}
+
+nav ul ul {
+    position: absolute;
+    border-top: 3px solid cyan;
+    top: 70px;
+    opacity: 0;
+    text-align: center;
+    visibility: hidden;
+}
+
+nav ul ul ul {
+    border-top: none;
+}
+
+nav ul li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li {
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+
+}
+
+nav ul ul li a {
+    line-height: 50px;
+}
+
+nav ul ul ul li {
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+
+.stopwatch {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.watch {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(120deg, #f06, #0f9, #f06);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s infinite;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.watch-inner {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(120deg, #ff0, #00f, #ff0);
+    background-size: 200% 200%;
+    animation: gradientAnimation 5s reverse infinite;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.time {
+    font-size: 3em;
+    font-family: 'Arial Narrow', sans-serif;
+    color: #333;
+}
+
+button {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    background: linear-gradient(120deg, #ff3c3c, #ff6b6b, #ff3c3c);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(120deg, #ff1e1e, #ff4545, #ff1e1e);
+}
+
+.laps {
+    list-style-type: none;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.laps li {
+    font-size: 1.2em;
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 200% 200%;
+    }
+}
+
+.tracking-in-contract-bck-top {
+    -webkit-animation: tracking-in-contract-bck-top 10s cubic-bezier(.215, .61, .355, 1.000) both;
+    animation: tracking-in-contract-bck-top 10s cubic-bezier(.215, .61, .355, 1.000) both
+}
+
+@-webkit-keyframes tracking-in-contract-bck-top {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px) translateY(-300px);
+        transform: translateZ(400px) translateY(-300px);
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1
+    }
+}
+
+@keyframes tracking-in-contract-bck-top {
+    0% {
+        letter-spacing: 1em;
+        -webkit-transform: translateZ(400px) translateY(-300px);
+        transform: translateZ(400px) translateY(-300px);
+        opacity: 0
+    }
+
+    40% {
+        opacity: .6
+    }
+
+    100% {
+        -webkit-transform: translateZ(0) translateY(0);
+        transform: translateZ(0) translateY(0);
+        opacity: 1
+    }
+}

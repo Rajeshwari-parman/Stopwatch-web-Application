@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Animated Stopwatch</title>
+</head>
+
+<body>
+    <div class="stopwatch">
+        <h1 class="tracking-in-contract-bck-top">T A S K - 2</h1>
+        <div class="watch">
+            <div class="watch-inner">
+                <div class="time" id="display">00:00:00</div>
+            </div>
+        </div>
+        <button id="startStop" onclick="startStop()">Start</button>
+        <button id="reset" onclick="reset()">Reset</button>
+        <button id="lap" onclick="recordLap()">Lap</button>
+    </div>
+    <ul class="laps" id="lapsList"></ul>
+    <script src="script.js"></script>
+</body>
+
+</html>
