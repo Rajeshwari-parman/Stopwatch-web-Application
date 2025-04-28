@@ -1,2 +1,2 @@
-# PRODIGY_WD_02
+# Stopwatch web Application
 Stopwatch  web Application
